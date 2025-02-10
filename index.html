@@ -1,0 +1,66 @@
+<html>
+  <header>
+    <title>Site simples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </header>
+  <body>
+    <div class="start">
+      <div class="title">
+        <h1>Supermercado Sander</h1>
+      </div>
+      <div class="search">
+        <form action="#" method="get" class="alignButton">
+          <input
+            type="text"
+            placeholder="   Pesquisar produtos..."
+            class="input-search"
+          />
+          <button type="submit" class="btn-search">
+            <img src="./icons/search-icon.png" alt="search" />
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mid">
+      <div class="menu">
+        <button class="btn-search-menu">Pesquisar</button>
+        <button class="btn-products-menu">Principais Produtos</button>
+      </div>
+      <div class="promo-day">
+        <h1>Promoções do dia</h1>
+      </div>
+      
+      <div class="carousel-container">
+      <!-- Botão para voltar -->
+      <button class="prev" onclick="changeItem(-1)">&#10094;</button>
+      
+      <!-- Carrossel de itens -->
+      <div class="carousel">
+        <div class="carousel-item" id="item1">
+          <h2>Item 1</h2>
+          <p>Descrição do item 1</p>
+        </div>
+        <div class="carousel-item" id="item2">
+          <h2>Item 2</h2>
+          <p>Descrição do item 2</p>
+        </div>
+        <div class="carousel-item" id="item3">
+          <h2>Item 3</h2>
+          <p>Descrição do item 3</p>
+        </div>
+        <div class="carousel-item" id="item4">
+          <h2>Item 4</h2>
+          <p>Descrição do item 4</p>
+        </div>
+      </div>
+
+      <!-- Botão para avançar -->
+      <button class="next" onclick="changeItem(1)">&#10095;</button>
+    </div>
+
+    <script src="index.js"></script>
+  
+  </body>
+</html>
