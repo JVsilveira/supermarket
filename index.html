@@ -1,14 +1,62 @@
 <html>
   <header>
-    <title>Site simples</title>
+    <title>SuperMercado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
   </header>
   <body>
     <div class="start">
-      <div class="title">
-        <h1>Supermercado Sander</h1>
+      <div class="menu">
+        <div class="hamburger-menu" id="hamburgerMenu" onclick="toggleMenu()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="#item1">Produto 1</a>
+          <a href="#item2">Produto 2</a>
+          <a href="#item3">Produto 3</a>
+        </div>
+        <div class="title">
+          <h1>Supermercado</h1>
+        </div>
       </div>
+      <div class="promo-day"><h1>OFERTAS DO DIA</h1></div>
+      <div class="carousel-container">
+        <button class="prev" onclick="changeItem(-1)">&#10094;</button>
+        <div class="carousel">
+          <div class="carousel-item" id="item1">
+            <h2>Item 1</h2>
+            <p>Descrição do item 1</p>
+          </div>
+          <div class="carousel-item" id="item2">
+            <h2>Item 2</h2>
+            <p>Descrição do item 2</p>
+          </div>
+          <div class="carousel-item" id="item3">
+            <h2>Item 3</h2>
+            <p>Descrição do item 3</p>
+          </div>
+          <div class="carousel-item" id="item4">
+            <h2>Item 4</h2>
+            <p>Descrição do item 4</p>
+          </div>
+          <div class="carousel-item" id="item5">
+            <h2>Item 5</h2>
+            <p>Descrição do item 5</p>
+          </div>
+          <div class="carousel-item" id="item6">
+            <h2>Item 6</h2>
+            <p>Descrição do item 6</p>
+          </div>
+        </div>
+        <button class="next" onclick="changeItem(1)">&#10095;</button>
+      </div>
+      <div class="moreOff"><h2>Ver mais ofertas</h2></div>
+    </div>
+
+    <div class="mid">
+      
       <div class="search">
         <form action="#" method="get" class="alignButton">
           <input
@@ -23,53 +71,6 @@
       </div>
     </div>
 
-    <div class="mid">
-      <div class="menu">
-        <button class="btn-search-menu">Pesquisar</button>
-        <button class="btn-products-menu">Principais Produtos</button>
-      </div>
-      <div class="promo-day">
-        <h1>Promoções do dia</h1>
-      </div>
-      
-      <div class="carousel-container">
-    
-      <button class="prev" onclick="changeItem(-1)">&#10094;</button>
-      
-    
-      <div class="carousel">
-        <div class="carousel-item" id="item1">
-          <h2>Item 1</h2>
-          <p>Descrição do item 1</p>
-        </div>
-        <div class="carousel-item" id="item2">
-          <h2>Item 2</h2>
-          <p>Descrição do item 2</p>
-        </div>
-        <div class="carousel-item" id="item3">
-          <h2>Item 3</h2>
-          <p>Descrição do item 3</p>
-        </div>
-        <div class="carousel-item" id="item4">
-          <h2>Item 4</h2>
-          <p>Descrição do item 4</p>
-        </div>
-        <div class="carousel-item" id="item5">
-          <h2>Item 5</h2>
-          <p>Descrição do item 5</p>
-        </div>
-        <div class="carousel-item" id="item6">
-          <h2>Item 6</h2>
-          <p>Descrição do item 6</p>
-        </div>
-      </div>
-      <button class="next" onclick="changeItem(1)">&#10095;</button>
-    
-    </div>
-      <div class="moreOff"><h2>Ver mais ofertas</h2</div></div>
-
-
     <script src="index.js"></script>
-  
   </body>
 </html>

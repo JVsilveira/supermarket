@@ -36,3 +36,16 @@ function resetAutoChange() {
 }
 
 startAutoChange()
+
+function toggleMenu() {
+  var menu = document.getElementById("dropdownMenu");
+  var hamburger = document.getElementById("hamburgerMenu");
+  
+  if (menu.style.display === "block") {
+    menu.style.display = "none";  
+    hamburger.classList.remove("active"); 
+  } else {
+    menu.style.display = "block";  
+    hamburger.classList.add("active"); 
+  }
+}
