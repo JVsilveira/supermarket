@@ -173,7 +173,7 @@ h1 {
 .mid {
   display: flex;
   height: 100vh;
-  background-color: #ebe8ce;
+  background-color: #eef1c3;
   flex-direction: column;
 }
 .title {
@@ -199,13 +199,13 @@ h1 {
 .input-search {
   height: 8vh;
   width: 70vw;
-  border: 1px solid #ccc;
+  border: 1px solid #eef1c3;
   border-radius: 5px;
 }
 
 .btn-search {
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid #eef1c3;
   border-radius: 5px;
   margin-left: 1vw;
 }
