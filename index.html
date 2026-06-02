@@ -1,132 +1,207 @@
-<html>
-  <header>
-    <title>SuperMercado</title>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
-  </header>
+
+    <meta
+      name="description"
+      content="Projeto de supermercado desenvolvido com HTML, CSS e JavaScript."
+    />
+
+    <title>SuperMercado</title>
+
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
   <body>
-    <div class="start">
-      <div class="menu">
-        <div class="hamburger-menu" id="hamburgerMenu" onclick="toggleMenu()">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <div class="itens">
-            <a href="#item1">ALIMENTOS</a>
-            <a href="#item2">PRODUTO DE LIMPEZA</a>
-            <a href="#item3">BEBIDAS</a>
-            <a href="#item4">VERDURAS, FRUTAS E LEGUMES</a>
-            <a href="#item5">DIVERSOS</a>
-          </div>
-        </div>
-        <div class="title">
-          <h1>Supermercado</h1>
-        </div>
-      </div>
-      <div class="promo-day"><h1>OFERTAS DO DIA</h1></div>
-      <div class="carousel-container">
-        <button class="prev" onclick="changeItem(-1)">&#10094;</button>
-        <div class="carousel">
-          <div class="carousel-item" id="item1">
-            <h2><img src="./imgs/amaciante.png" alt="" /></h2>
-            <a href="">Amaciante: <s>R$10,00</s> R$8,00</a>
-          </div>
-          <div class="carousel-item" id="item2">
-            <h2><img src="./imgs/arroz.png" alt="" /></h2>
-            <a href="">Arroz 5KG: <s>R$25,00</s> R$22,00</a>
-          </div>
-          <div class="carousel-item" id="item3">
-            <h2><img src="./imgs/bolacha2.png" alt="" /></h2>
-            <a href="">Bolacha: <s>R$4,00</s> R$3,50</a>
-          </div>
-          <div class="carousel-item" id="item4">
-            <h2><img src="./imgs/cerveja.png" alt="" /></h2>
-            <a href="">Cerveja 437ml: <s>R$5,50</s> R$5,00</a>
-          </div>
-          <div class="carousel-item" id="item5">
-            <h2><img src="./imgs/feijão.png" alt="" /></h2>
-            <a href="">Feijão 1KG: <s>R$9,00</s> R$8,00</a>
-          </div>
-          <div class="carousel-item" id="item6">
-            <h2><img src="./imgs/refri2.png" alt="" /></h2>
-            <a href="">Refrigerante 2L: <s>R$8,00</s> R$7,00</a>
-          </div>
-        </div>
-        <button class="next" onclick="changeItem(1)">&#10095;</button>
-      </div>
-      <div class="moreOff">
-        <h2>Ver mais ofertas</h2>
+    <header class="header">
+      <nav class="navbar">
+        <button
+          type="button"
+          class="hamburger-menu"
+          id="hamburgerMenu"
+          aria-label="Abrir menu"
+        >
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </button>
 
-        <img src="./icons/down.png" alt="search" />
-      </div>
-    </div>
+        <div
+          class="dropdown-menu"
+          id="dropdownMenu"
+          role="menu"
+          aria-label="Menu de navegação"
+        >
+          <a href="#ofertas">Ofertas</a>
+          <a href="#produtos">Produtos</a>
+        </div>
 
-    <div class="mid">
-      <div class="search">
-        <form action="#" method="get" class="alignButton">
+        <h1 class="logo">SuperMercado</h1>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="ofertas" aria-labelledby="titulo-ofertas">
+        <h2 id="titulo-ofertas">Ofertas do Dia</h2>
+
+        <div class="carousel-container">
+          <button class="prev" aria-label="Oferta anterior">&#10094;</button>
+
+          <div class="carousel">
+            <article class="carousel-item" data-product="amaciante">
+              <img
+                src="./imgs/amaciante.png"
+                alt="Amaciante em promoção"
+                loading="lazy"
+              />
+              <p>Amaciante</p>
+              <span><s>R$10,00</s> R$8,00</span>
+            </article>
+
+            <article class="carousel-item" data-product="arroz">
+              <img
+                src="./imgs/arroz.png"
+                alt="Arroz 5KG em promoção"
+                loading="lazy"
+              />
+              <p>Arroz 5KG</p>
+              <span><s>R$25,00</s> R$22,00</span>
+            </article>
+
+            <article class="carousel-item" data-product="bolacha">
+              <img
+                src="./imgs/bolacha2.png"
+                alt="Bolacha em promoção"
+                loading="lazy"
+              />
+              <p>Bolacha</p>
+              <span><s>R$4,00</s> R$3,50</span>
+            </article>
+
+            <article class="carousel-item" data-product="cerveja">
+              <img
+                src="./imgs/cerveja.png"
+                alt="Cerveja 437ml em promoção"
+                loading="lazy"
+              />
+              <p>Cerveja 437ml</p>
+              <span><s>R$5,50</s> R$5,00</span>
+            </article>
+
+            <article class="carousel-item" data-product="feijão">
+              <img
+                src="./imgs/feijão.png"
+                alt="Feijão 1KG em promoção"
+                loading="lazy"
+              />
+              <p>Feijão 1KG</p>
+              <span><s>R$9,00</s> R$8,00</span>
+            </article>
+
+            <article class="carousel-item" data-product="refrigerante">
+              <img
+                src="./imgs/refri2.png"
+                alt="Refrigerante 2L em promoção"
+                loading="lazy"
+              />
+              <p>Refrigerante 2L</p>
+              <span><s>R$8,00</s> R$7,00</span>
+            </article>
+          </div>
+
+          <button class="next" aria-label="Próxima oferta">&#10095;</button>
+        </div>
+      </section>
+
+      <section class="search-section" aria-labelledby="titulo-produtos">
+        <form class="search-form" id="searchForm">
           <input
-            type="text"
-            placeholder="   Pesquisar produtos..."
+            type="search"
             class="input-search"
+            id="searchInput"
+            placeholder="Pesquisar produtos..."
+            aria-label="Pesquisar produtos"
           />
-          <button type="submit" class="btn-search">
-            <img src="./icons/search-icon.png" alt="search" />
+
+          <button type="submit" class="btn-search" aria-label="Pesquisar">
+            <img src="./icons/search-icon.png" alt="" />
           </button>
         </form>
-      </div>
-      <div class="allProducts">
-        <div class="line">
-          <div class="product">
-            <img src="./imgs/banana.png" alt="" /><a href="">
-              Banana: R$3,00/KG</a
-            >
-          </div>
-          <div class="product">
-            <img src="./imgs/carne.png" alt="" /><a href="">
-              Patinho: R$25,00/KG</a
-            >
-          </div>
-          <div class="product">
-            <img src="./imgs/desinfetante.png" alt="" /><a href="">
-              Desinfetante 2L: R$15,00</a
-            >
-          </div>
-        </div>
-        <div class="line">
-          <div class="product">
-            <img src="./imgs/pneu.png" alt="" /><a href=""> Pneu: R$299,00</a>
-          </div>
-          <div class="product">
-            <img src="./imgs/ceva.png" alt="" /><a href="">
-              Cerveja 330ml: R$6,00 uni</a
-            >
-          </div>
-          <div class="product">
-            <img src="./imgs/bolacha.png" alt="" /><a href="">
-              Bolacha: R$3,00</a
-            >
-          </div>
-        </div>
-        <div class="line">
-          <div class="product">
-            <img src="./imgs/qboa.png" alt="" /><a href=""> Qboa 5L: R$8,00</a>
-          </div>
-          <div class="product">
-            <img src="./imgs/sabaoempo.png" alt="" /><a href="">
-              Sabão em pó: R$20,00</a
-            >
-          </div>
-          <div class="product">
-            <img src="./imgs/refri.png" alt="" /><a href="">
-              Refrigerante 2L: R$8,00</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
 
-    <script src="index.js"></script>
+      <section class="products-section" id="produtos">
+        <h2 id="titulo-produtos">Nossos Produtos</h2>
+
+        <div class="products-grid">
+          <article class="product-card" data-product="banana">
+            <img src="./imgs/banana.png" alt="Banana" />
+            <h3>Banana</h3>
+            <p>R$ 3,00 / KG</p>
+          </article>
+
+          <article class="product-card" data-product="carne">
+            <img src="./imgs/carne.png" alt="Patinho" />
+            <h3>Patinho</h3>
+            <p>R$ 25,00 / KG</p>
+          </article>
+
+          <article class="product-card" data-product="desinfetante">
+            <img src="./imgs/desinfetante.png" alt="Desinfetante" />
+            <h3>Desinfetante 2L</h3>
+            <p>R$ 15,00</p>
+          </article>
+
+          <article class="product-card" data-product="pneu">
+            <img src="./imgs/pneu.png" alt="Pneu" />
+            <h3>Pneu</h3>
+            <p>R$ 299,00</p>
+          </article>
+
+          <article class="product-card" data-product="cerveja">
+            <img src="./imgs/ceva.png" alt="Cerveja" />
+            <h3>Cerveja 330ml</h3>
+            <p>R$ 6,00</p>
+          </article>
+
+          <article class="product-card" data-product="bolacha">
+            <img src="./imgs/bolacha.png" alt="Bolacha" />
+            <h3>Bolacha</h3>
+            <p>R$ 3,00</p>
+          </article>
+
+          <article class="product-card" data-product="qboa">
+            <img src="./imgs/qboa.png" alt="Qboa 5L" />
+            <h3>Qboa 5L</h3>
+            <p>R$ 8,00</p>
+          </article>
+
+          <article class="product-card" data-product="sabao">
+            <img src="./imgs/sabaoempo.png" alt="Sabão em pó" />
+            <h3>Sabão em Pó</h3>
+            <p>R$ 20,00</p>
+          </article>
+
+          <article class="product-card" data-product="refrigerante">
+            <img src="./imgs/refri.png" alt="Refrigerante 2L" />
+            <h3>Refrigerante 2L</h3>
+            <p>R$ 8,00</p>
+          </article>
+        </div>
+        <p class="no-results" id="noResults">Nenhum produto encontrado.</p>
+      </section>
+
+      <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        ↑
+      </button>
+    </main>
+
+    <footer class="footer">
+      <p>Projeto desenvolvido para estudo de HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
